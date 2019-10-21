@@ -23,6 +23,8 @@ export default {
   data() {
     return {
       videos: [
+        "carabineros provocando incendio.mp4",
+        "militar dando instrucciones a personas para entrar a tomar cosas de un local.mp4",
         "Manifestaciones masivas en Concepcion 21-10-2019.mp4",
         "Detencion de carabineros usando un auto particular.mp4",
         "carabineros y pdi dan ventaja para despues disparar por la espalda.mp4",
