@@ -8,8 +8,18 @@
 </template>
 
 <script>
+const fs = require("fs");
 
 export default {
+  created() {
+    fs.readdir('../assets/videos/', function(err, items) {
+      console.log(items);
+
+      for (var i = 0; i < items.length; i++) {
+        console.log(items[i]);
+      }
+    });
+  },
   data() {
     return {
       videos: [
