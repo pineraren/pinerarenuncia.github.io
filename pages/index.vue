@@ -13,6 +13,7 @@ export default {
   data() {
     return {
       videos: [
+        "Manifestaciones masivas en Concepcion 21-10-2019.mp4",
         "Detencion de carabineros usando un auto particular.mp4",
         "carabineros y pdi dan ventaja para despues disparar por la espalda.mp4",
         "carabineros persigue a una persona que esta grabando hasta su casa.mp4",
