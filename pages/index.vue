@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       videos: [
+        "carabinero llora en medio de la gente.mp4",
         "Militares disparando a mansalva en Bellavista Valparaiso 2.mp4",
         "Militares disparando a mansalva en Bellavista Valparaiso.mp4",
         "Militares amedrentando personas con sus rifles en apoquindo 2.mp4",
