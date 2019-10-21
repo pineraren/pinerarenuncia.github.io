@@ -1,0 +1,22 @@
+{
+  "name": "pinerarenuncia",
+  "version": "1.0.0",
+  "description": "Pruebas para que Pinera renuncie",
+  "author": "Miguel Alcaino",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}
