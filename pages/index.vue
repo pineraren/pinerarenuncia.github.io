@@ -1,7 +1,7 @@
 <template>
   <div class="links">
     <div v-for="(video, index) in videos" :key="index" class="video-box">
-      <h4>{{video}}</h4>
+      <h4>{{video}}</h4> <nuxt-link to="">Comparte esto</nuxt-link>
       <video controls :src="require('~/assets/videos/'+video)"></video>
     </div>
   </div>
@@ -12,6 +12,12 @@ export default {
   data() {
     return {
       videos: [
+        "Militares disparando a mansalva en Bellavista Valparaiso 2.mp4",
+        "Militares disparando a mansalva en Bellavista Valparaiso.mp4",
+        "Militares amedrentando personas con sus rifles en apoquindo 2.mp4",
+        "Militares amedrentando personas con sus rifles en apoquindo.mp4",
+        "protestas en escuela militar Santiago.mp4",
+        "carabineros guardando cajas con televisores en su patrulla.mp4",
         "carabineros provocando incendio.mp4",
         "militar dando instrucciones a personas para entrar a tomar cosas de un local.mp4",
         "Manifestaciones masivas en Concepcion 21-10-2019.mp4",
