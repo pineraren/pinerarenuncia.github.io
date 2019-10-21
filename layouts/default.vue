@@ -8,7 +8,6 @@
         </div>
         <h1 class="title">Pi&ntilde;era renuncia!</h1>
         <h2 class="subtitle">Pruebas irrefutables para que Pi&ntilde;era renuncie</h2>
-        <h3>Lista de videos por orden de aparicion</h3>
         <nuxt />
       </div>
     </div>

@@ -1,14 +1,19 @@
 <template>
   <div class="links">
+    <h3>Lista de videos por orden de aparicion</h3>
     <div v-for="(video, index) in videos" :key="index" class="video-box">
-      <h4>{{video}}</h4> <nuxt-link to="">Comparte esto</nuxt-link>
-      <video controls :src="require('~/assets/videos/'+video)"></video>
+      <video-box :video="video" />
     </div>
   </div>
 </template>
 
 <script>
+import VideoBox from "../components/VideoBox";
+
 export default {
+  components: {
+    VideoBox
+  },
   data() {
     return {
       videos: [
