@@ -54,5 +54,10 @@ export default {
     extend (config, ctx) {
     }
   },
-  routerBase
+  routerBase,
+  generate: {
+    routes: [
+      '/video/Militares intentan sacar a una persona desde su casa y le apuntan.mp4'
+    ]
+  }
 }
