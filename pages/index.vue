@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       videos: [
+        "Militares disparando en frente de edificios.mp4",
         "carabineros de civil salen de un banco y comienza a salir humo.mp4",
         "carabinero llora en medio de la gente.mp4",
         "Militares disparando a mansalva en Bellavista Valparaiso 2.mp4",
