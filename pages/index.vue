@@ -3,7 +3,7 @@
     <h2 class="title">Lista de videos por orden de aparici&oacute;n</h2>
 
     <div v-for="row in rowsAmount" :key="row" class="row columns">
-      <video-box v-for="(video, index) in getVideosForRow(row)"
+      <video-box v-for="(video, index) in getVideosForRow(row-1)"
                  :key="index" :video="video"/>
     </div>
   </div>

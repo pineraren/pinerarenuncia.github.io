@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-content">
         <p class="title is-6">
-          {{video}}
+          {{videoTitle}}
         </p>
         <video preload="metadata" controls :src="require('~/assets/videos/'+video)"></video>
       </div>
@@ -24,6 +24,15 @@
       video: {
         default: 'Chadwick cagao de la risa.mp4',
         type: String
+      }
+    },
+    computed: {
+      videoTitle(){
+        if(typeof this.video === 'string'){
+          return this.video;
+        }
+
+        return this.video.title;
       }
     }
   }
