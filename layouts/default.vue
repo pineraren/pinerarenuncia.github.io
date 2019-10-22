@@ -1,96 +1,104 @@
 <template>
   <div>
-    <div class="container">
-      <div>
-        <div>
-          <nuxt-link to="/">Index</nuxt-link>
-          <nuxt-link to="/flyers">Afiches</nuxt-link>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </div>
-        <h1 class="title">Pi&ntilde;era renuncia!</h1>
-        <h2 class="subtitle">Pruebas irrefutables para que Pi&ntilde;era renuncie</h2>
-        <nuxt />
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <nuxt-link class="navbar-item is-active" to="/">Videos</nuxt-link>
+            <nuxt-link class="navbar-item" to="/flyers">Flyers</nuxt-link>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAV -->
+
+    <div class="container">
+      <div id="flow">
+        <span class="flow-1"></span>
+        <span class="flow-2"></span>
+        <span class="flow-3"></span>
+      </div>
+      <div class="section">
+        <div class="box">
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input
+                class="input has-text-centered"
+                type="search"
+              />
+            </div>
+            <div class="control">
+              <a class="button is-info">Buscar</a>
+            </div>
+          </div>
+        </div>
+
+          <nuxt />
+
       </div>
     </div>
+
+<!--    <footer class="footer">-->
+    <!--      <div class="container">-->
+    <!--        <div class="content has-text-centered">-->
+    <!--          <div class="soc">-->
+    <!--            <a href="#">-->
+    <!--              <i class="fa fa-github-alt fa-2x" aria-hidden="true"></i>-->
+    <!--            </a>-->
+    <!--            <a href="#">-->
+    <!--              <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>-->
+    <!--            </a>-->
+    <!--            <a href="#">-->
+    <!--              <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>-->
+    <!--            </a>-->
+    <!--            <a href="#">-->
+    <!--              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>-->
+    <!--            </a>-->
+    <!--          </div>-->
+    <!--          <p>-->
+    <!--            <strong>Bulma</strong> by-->
+    <!--            <a href="http://jgthms.com">Jeremy Thomas</a>.-->
+    <!--            The source code is licensed-->
+    <!--            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.-->
+    <!--            <br/>-->
+    <!--          </p>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </footer>-->
   </div>
 </template>
 
+<script>
+  export default {
+    head() {
+      return {
+        title: "Piñera renuncia!",
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {hid: "charset", charset: "utf-8"},
+          {
+            hid: "charset",
+            name: "viewport",
+            content: "width=device-width, initial-scale=1"
+          }
+        ]
+      };
+    }
+  };
+</script>
+
 <style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+  @import "../node_modules/bulma/css/bulma.css";
+</style>
+<style>
+  .links {
+    padding-top: 15px;
+  }
 </style>
