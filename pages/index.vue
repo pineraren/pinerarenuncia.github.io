@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Lista de videos por orden de aparicion</h3>
+    <h2 class="title">Lista de videos por orden de aparici&oacute;n</h2>
 
     <div v-for="row in rowsAmount" :key="row" class="row columns">
       <video-box v-for="(video, index) in getVideosForRow(row)"
