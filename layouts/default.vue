@@ -36,26 +36,12 @@
         <span class="flow-3"></span>
       </div>
       <div class="section">
-        <div class="box">
-          <div class="field has-addons">
-            <div class="control is-expanded">
-              <input
-                class="input has-text-centered"
-                type="search"
-              />
-            </div>
-            <div class="control">
-              <a class="button is-info">Buscar</a>
-            </div>
-          </div>
-        </div>
-
-          <nuxt />
+        <nuxt/>
 
       </div>
     </div>
 
-<!--    <footer class="footer">-->
+    <!--    <footer class="footer">-->
     <!--      <div class="container">-->
     <!--        <div class="content has-text-centered">-->
     <!--          <div class="soc">-->

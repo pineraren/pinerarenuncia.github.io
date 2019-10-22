@@ -1,5 +1,19 @@
 <template>
   <div>
+    <div class="box">
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input
+            v-model="searchText"
+            class="input has-text-centered"
+            type="search"
+          />
+        </div>
+        <div class="control">
+          <a class="button is-info">Buscar</a>
+        </div>
+      </div>
+    </div>
     <h2 class="title">Lista de videos por orden de aparici&oacute;n</h2>
 
     <div v-for="row in rowsAmount" :key="row" class="row columns">
@@ -20,12 +34,23 @@
     data() {
       return {
         videos: json,
-        columns: 3
+        columns: 3,
+        searchText: ''
       };
     },
     computed: {
       rowsAmount() {
         return Math.round(this.videos.length / this.columns);
+      },
+      filteredVideos() {
+        if (!this.searchText || 0 === this.searchText.length) {
+          return this.videos;
+        }
+
+        let self = this;
+        return this.videos.filter(function (fileName) {
+          return fileName.search(self.searchText) !== -1;
+        })
       }
     },
     methods: {
