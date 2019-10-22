@@ -1,8 +1,16 @@
+import jsonVideos from './assets/videos.json';
+
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/pinerarenuncia/'
   }
 } : {}
+
+let videosRoutes = [];
+
+for(let i = 0; i < jsonVideos.length; i++){
+  videosRoutes.push('/video/'+jsonVideos[i]);
+}
 
 export default {
   mode: 'universal',
@@ -56,8 +64,6 @@ export default {
   },
   routerBase,
   generate: {
-    routes: [
-      '/video/Militares intentan sacar a una persona desde su casa y le apuntan.mp4'
-    ]
+    routes: videosRoutes
   }
 }
