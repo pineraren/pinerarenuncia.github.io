@@ -1,19 +1,20 @@
 <template>
   <div class="column is-one-third">
-    <div class="card large">
-      <div class="card-image">
-
-          <video preload="metadata" controls :src="require('~/assets/videos/'+video)"></video>
-        
-      </div>
+    <div class="card">
       <div class="card-content">
-        <div class="content">
-          {{video}}<br>
-          <span class="title is-6">
-                       <nuxt-link :to="'video/'+video">Comparte esto</nuxt-link>
-                      </span>
-        </div>
+        <p class="title is-6">
+          {{video}}
+        </p>
+        <video preload="metadata" controls :src="require('~/assets/videos/'+video)"></video>
       </div>
+      <footer class="card-footer">
+        <p class="card-footer-item">
+      <span>
+        <nuxt-link :to="'video/'+video">Comparte esto</nuxt-link>
+      </span>
+        </p>
+
+      </footer>
     </div>
   </div>
 </template>
