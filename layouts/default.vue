@@ -86,7 +86,7 @@
           },
           {
             hid: "og_description",
-            "og:description": "Videos de la represión que se vive en Chile"
+            "og:description": "Evidencia de lo que está pasando en Chile"
           },
           {
             hid: "og_image",
