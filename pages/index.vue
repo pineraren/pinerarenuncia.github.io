@@ -49,7 +49,7 @@
 
         let self = this;
         return this.videos.filter(function (fileName) {
-          return fileName.search(self.searchText) !== -1;
+          return fileName.toLowerCase().search(self.searchText.toLowerCase()) !== -1;
         })
       }
     },
