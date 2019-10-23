@@ -10,7 +10,7 @@
           />
         </div>
         <div class="control">
-          <a class="button is-info">Buscar</a>
+          <button @click="clearSearch" class="button is-danger">Borrar busqueda</button>
         </div>
       </div>
     </div>
@@ -35,12 +35,12 @@
       return {
         videos: json,
         columns: 3,
-        searchText: ''
+        searchText: null
       };
     },
     computed: {
       rowsAmount() {
-        return Math.round(this.videos.length / this.columns);
+        return Math.round(this.filteredVideos.length / this.columns);
       },
       filteredVideos() {
         if (!this.searchText || 0 === this.searchText.length) {
@@ -54,11 +54,14 @@
       }
     },
     methods: {
+      clearSearch(){
+        this.searchText = null;
+      },
       getVideosForRow(row) {
         let videos = [];
         for (let i = row * this.columns; i < (row + 1) * this.columns; i++) {
-          if (typeof this.videos[i] !== 'undefined' && this.videos[i] !== null) {
-            videos.push(this.videos[i]);
+          if (typeof this.filteredVideos[i] !== 'undefined' && this.filteredVideos[i] !== null) {
+            videos.push(this.filteredVideos[i]);
           }
 
         }
