@@ -6,7 +6,7 @@
           <a class="navbar-item" href="../">
             <div class="columns">
               <div class="column">
-                <p class="title is-1">Pi&ntilde;era renuncia!</p>
+                <p class="title is-1">Esto pasa en Chile</p>
                 <p class="subtitle is-6">Evidencia de lo que est&aacute; pasando en Chile</p>
               </div>
             </div>
@@ -75,7 +75,7 @@
   export default {
     head() {
       return {
-        title: "Piñera renuncia!",
+        title: "Esto pasa en Chile",
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {hid: "charset", charset: "utf-8"},
@@ -85,12 +85,19 @@
             content: "width=device-width, initial-scale=1"
           },
           {
+            hid: "og_title",
+            property: "og:title",
+            content: "Esto pasa en Chile"
+          },
+          {
             hid: "og_description",
-            "og:description": "Evidencia de lo que está pasando en Chile"
+            property: "og:description",
+            content: "Evidencia de lo que está pasando en Chile"
           },
           {
             hid: "og_image",
-            "og:image": require('../assets/images/og_image.png')
+            property: "og:image",
+            content: require('../assets/images/og_image.png')
           }
         ]
       };
