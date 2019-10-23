@@ -4,13 +4,13 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="../">
-            <h1 class="title is-1">Pi&ntilde;era renuncia!</h1>
+            <div class="columns">
+              <div class="column">
+                <p class="title is-1">Pi&ntilde;era renuncia!</p>
+                <p class="subtitle is-6">Evidencia de lo que est&aacute; pasando en Chile</p>
+              </div>
+            </div>
           </a>
-          <span class="navbar-burger burger" data-target="navbarMenu">
-                                <span></span>
-                        <span></span>
-                        <span></span>
-                        </span>
         </div>
         <div class="navbar-brand">
           <span class="navbar-burger burger" data-target="navbarMenu">
@@ -83,6 +83,14 @@
             hid: "charset",
             name: "viewport",
             content: "width=device-width, initial-scale=1"
+          },
+          {
+            hid: "og_description",
+            "og:description": "Videos de la represión que se vive en Chile"
+          },
+          {
+            hid: "og_image",
+            "og:image": require('../assets/images/og_image.png')
           }
         ]
       };
