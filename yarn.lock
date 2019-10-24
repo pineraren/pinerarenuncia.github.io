@@ -944,6 +944,11 @@
     webpack-node-externals "^1.7.2"
     webpackbar "^4.0.0"
 
+"@nuxtjs/device@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/device/-/device-1.2.3.tgz#0b9c744fef10fa6c9b5d0155c3fbcde2c8dd671f"
+  integrity sha512-VKP8kYL7Ua7BLUStDhnT+N/nv5fta7E7S/aMuMsuWwcDDmlyN+8OCe/jBNAoe6z1LPw2MSiMQYC9VR9mUIZybg==
+
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/@nuxtjs/youch/-/youch-4.2.3.tgz#36f8b22df5a0efaa81373109851e1d857aca6bed"
