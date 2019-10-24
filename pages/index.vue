@@ -42,7 +42,7 @@
 
 <script>
   import VideoBox from "../components/VideoBox";
-  import json from '../assets/videos.json';
+  import videosProcessor from "../lib/VideosProcessor"
 
   export default {
     components: {
@@ -54,7 +54,7 @@
     },
     data() {
       return {
-        videos: json,
+        videos: videosProcessor.getVideos(),
         columns: 3,
         searchText: null,
         maxItemsPerPageForMobile: 3,
@@ -73,14 +73,7 @@
         return !this.searchText || 0 === this.searchText.length;
       },
       filteredVideos() {
-        if (this.isSearchEmpty) {
-          return this.videos;
-        }
-
-        let self = this;
-        return this.videos.filter(function (fileName) {
-          return fileName.toLowerCase().search(self.searchText.toLowerCase()) !== -1;
-        })
+        return videosProcessor.search(this.videos, this.isSearchEmpty ? null : this.searchText);
       },
       pagesAmount() {
         return Math.round(this.filteredVideos.length / this.videosPerPage);
