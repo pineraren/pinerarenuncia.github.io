@@ -19,6 +19,11 @@
       return {
         video: null
       };
+    },
+    head(){
+      return {
+        title: this.video.title
+      }
     }
   };
 </script>
