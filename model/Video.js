@@ -15,6 +15,10 @@ class Video {
   static createFromFile(file) {
     return new Video(file, file);
   }
+
+  get url() {
+    return require('~/assets/videos/' + this._file);
+  }
 }
 
 export {Video as default}

@@ -5,7 +5,7 @@
         <p class="title is-6">
           {{video.title}}
         </p>
-        <video preload="metadata" controls :src="videoUrl"></video>
+        <video preload="metadata" controls :src="video.url"></video>
       </div>
       <footer class="card-footer">
         <p class="card-footer-item">
@@ -15,7 +15,7 @@
         </p>
         <p class="card-footer-item">
       <span>
-        <a :href="videoUrl">Descarga</a>
+        <a :href="video.url">Descarga</a>
       </span>
         </p>
       </footer>
@@ -24,11 +24,6 @@
 </template>
 <script>
   export default {
-    props: ['video'],
-    computed: {
-      videoUrl() {
-        return require('~/assets/videos/' + this.video.file);
-      }
-    }
+    props: ['video']
   }
 </script>>

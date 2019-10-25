@@ -22,7 +22,14 @@
     },
     head(){
       return {
-        title: this.video.title
+        title: this.video.title,
+        meta: [
+          {
+            hid: 'og_single_video_video',
+            property: "og:video",
+            content: this.video.url
+          }
+        ]
       }
     }
   };
