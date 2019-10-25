@@ -19,6 +19,10 @@ class Video {
   get url() {
     return require('~/assets/videos/' + this._file);
   }
+
+  set title(value) {
+    this._title = value;
+  }
 }
 
 export {Video as default}
