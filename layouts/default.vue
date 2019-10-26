@@ -4,13 +4,13 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="../">
-            <h1 class="title is-1">Pi&ntilde;era renuncia!</h1>
+            <div class="columns">
+              <div class="column">
+                <p class="title is-1">Esto pasa en Chile</p>
+                <p class="subtitle is-6">Evidencia de lo que est&aacute; pasando en Chile</p>
+              </div>
+            </div>
           </a>
-          <span class="navbar-burger burger" data-target="navbarMenu">
-                                <span></span>
-                        <span></span>
-                        <span></span>
-                        </span>
         </div>
         <div class="navbar-brand">
           <span class="navbar-burger burger" data-target="navbarMenu">
@@ -75,7 +75,7 @@
   export default {
     head() {
       return {
-        title: "Piñera renuncia!",
+        title: "Esto pasa en Chile",
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {hid: "charset", charset: "utf-8"},
@@ -83,6 +83,21 @@
             hid: "charset",
             name: "viewport",
             content: "width=device-width, initial-scale=1"
+          },
+          {
+            hid: "og_title",
+            property: "og:title",
+            content: "Esto pasa en Chile"
+          },
+          {
+            hid: "og_description",
+            property: "og:description",
+            content: "Evidencia de lo que está pasando en Chile"
+          },
+          {
+            hid: "og_image",
+            property: "og:image",
+            content: require('../assets/images/og_image.png')
           }
         ]
       };

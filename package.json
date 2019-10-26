@@ -1,7 +1,7 @@
 {
-  "name": "pinerarenuncia",
+  "name": "estopasaenchile",
   "version": "1.0.0",
-  "description": "Pruebas para que Pinera renuncie",
+  "description": "Evidencia de lo que esta pasando en Chile",
   "author": "Miguel Alcaino",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
+    "@nuxtjs/device": "^1.2.3",
     "bulma": "^0.8.0",
     "nuxt": "^2.0.0"
   },

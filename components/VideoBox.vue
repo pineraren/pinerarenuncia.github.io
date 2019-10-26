@@ -3,19 +3,19 @@
     <div class="card">
       <div class="card-content">
         <p class="title is-6">
-          {{videoTitle}}
+          {{video.title}}
         </p>
-        <video preload="metadata" controls :src="videoFile"></video>
+        <video preload="metadata" controls :src="video.url"></video>
       </div>
       <footer class="card-footer">
         <p class="card-footer-item">
       <span>
-        <nuxt-link :to="'video/'+video">Comparte esto</nuxt-link>
+        <nuxt-link :to="'video/'+video.file">Comparte esto</nuxt-link>
       </span>
         </p>
         <p class="card-footer-item">
       <span>
-        <a :href="videoFile">Descarga</a>
+        <a :href="video.url">Descarga</a>
       </span>
         </p>
       </footer>
@@ -24,23 +24,6 @@
 </template>
 <script>
   export default {
-    props: {
-      video: {
-        default: 'Chadwick cagao de la risa.mp4',
-        type: String
-      }
-    },
-    computed: {
-      videoFile() {
-        return require('~/assets/videos/' + this.video);
-      },
-      videoTitle() {
-        if (typeof this.video === 'string') {
-          return this.video;
-        }
-
-        return this.video.title;
-      }
-    }
+    props: ['video']
   }
 </script>>
